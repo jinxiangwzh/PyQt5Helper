@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?PyQt5Helper version=0.2.0 encoding="UTF-8"?>
+<PyQt5Helper.prj-config>
+    <general>
+        <version state="0" cmd="--version" argv=""/>
+        <dist_path state="1" cmd="--distpath" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/generate/dist"/>
+        <work_path state="1" cmd="--workpath" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/generate/build"/>
+        <no_confirm state="1" cmd="--noconfirm" argv=""/>
+        <upx_dir state="0" cmd="--upx-dir" argv=""/>
+        <ascii state="0" cmd="--ascii" argv=""/>
+        <clean state="1" cmd="--clean" argv=""/>
+        <log_level state="1" cmd="--log-level" argv="INFO"/>
+    </general>
+    <generate_what>
+        <packet_dir state="1" cmd="--onedir" argv=""/>
+        <packet_one_file state="0" cmd="--onefile" argv=""/>
+        <spec_path state="1" cmd="--specpath" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/generate"/>
+        <app_name state="1" cmd="--name" argv="PyQt5Helper"/>
+    </generate_what>
+    <bundle_and_search>
+        <data_path state="1" cmd="--add-data" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/doc/pyinstaller.pdf;doc&amp;E:/TODO/pyqt5_common/Util/PyQt5Helper/template/file_version_info.txt;template&amp;"/>
+        <binary_path state="0" cmd="--add-binary" argv=""/>
+        <import_search_path state="0" cmd="--paths" argv=""/>
+        <hidden_import state="0" cmd="--hidden-import" argv=""/>
+        <additional_hooks state="0" cmd="--additional-hooks-dir" argv=""/>
+        <runtime_hooks state="0" cmd="--runtime-hook" argv=""/>
+        <exclude_module state="0" cmd="--exclude-module" argv=""/>
+        <key_cmd state="1" cmd="--key" argv="WGreatMasterZH"/>
+    </bundle_and_search>
+    <window_special>
+        <nowindowed state="0" cmd="--console" argv=""/>
+        <noconsole state="1" cmd="--windowed" argv=""/>
+        <icon state="1" cmd="--icon" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/resource/PyQt5Helper128.ico"/>
+        <version_file state="1" cmd="--version-file" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/file_version_info.txt"/>
+        <manifest state="0" cmd="--manifest" argv=""/>
+        <resource state="0" cmd="--resource" argv=""/>
+        <uac_admin state="0" cmd="--uac-admin" argv=""/>
+        <uac_uiaccess state="0" cmd="--uac-uiaccess" argv=""/>
+        <win_private_assemblies state="0" cmd="--win-private-assemblies" argv=""/>
+        <win_no_prefer_redirects state="0" cmd="--win-no-prefer-redirects" argv=""/>
+    </window_special>
+    <how_to_generate>
+        <debug state="0" cmd="--debug" argv=""/>
+        <strip state="0" cmd="--strip" argv=""/>
+        <spec_path state="0" cmd="--noupx" argv=""/>
+        <upx_exclude state="0" cmd="--upx-exclude" argv=""/>
+    </how_to_generate>
+    <none_cmd>
+        <project_path state="1" cmd="project_path" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/PyQt5Helper.gm"/>
+        <input_file_path state="1" cmd="py_file_path" argv="E:/TODO/pyqt5_common/Util/PyQt5Helper/PyQt5Helper.py"/>
+    </none_cmd>
+</PyQt5Helper.prj-config>

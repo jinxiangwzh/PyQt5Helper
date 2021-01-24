@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PyQt5Helper</class>
+ <widget class="QMainWindow" name="PyQt5Helper">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyQt5 Helper</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resource/resource.qrc">
+    <normaloff>:/left_menu/app_icon.png</normaloff>:/left_menu/app_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="main_parent_hl">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="new_action"/>
+    <addaction name="save_action"/>
+    <addaction name="open_action"/>
+    <addaction name="config_action"/>
+    <addaction name="exit_action"/>
+   </widget>
+   <widget class="QMenu" name="help_menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="donate_action"/>
+    <addaction name="about_author_action"/>
+    <addaction name="pyinstaller_pdf_action"/>
+    <addaction name="check_update_action"/>
+    <addaction name="about_software_action"/>
+   </widget>
+   <widget class="QMenu" name="tool_menu">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="pyuic5_action"/>
+    <addaction name="pyrcc5_action"/>
+    <addaction name="resource_action"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="tool_menu"/>
+   <addaction name="help_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="pyqt_helper_status_bar">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="new_action">
+   <property name="text">
+    <string>新建</string>
+   </property>
+  </action>
+  <action name="open_action">
+   <property name="text">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="about_author_action">
+   <property name="text">
+    <string>关于作者</string>
+   </property>
+  </action>
+  <action name="pyuic5_action">
+   <property name="text">
+    <string>pyuic5</string>
+   </property>
+  </action>
+  <action name="pyrcc5_action">
+   <property name="text">
+    <string>pyrcc5</string>
+   </property>
+  </action>
+  <action name="resource_action">
+   <property name="text">
+    <string>资源文件</string>
+   </property>
+  </action>
+  <action name="donate_action">
+   <property name="text">
+    <string>捐助开发</string>
+   </property>
+  </action>
+  <action name="save_action">
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="pyinstaller_pdf_action">
+   <property name="text">
+    <string>Pyinstaller help</string>
+   </property>
+  </action>
+  <action name="check_update_action">
+   <property name="text">
+    <string>检查更新</string>
+   </property>
+  </action>
+  <action name="about_software_action">
+   <property name="text">
+    <string>关于软件</string>
+   </property>
+  </action>
+  <action name="config_action">
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
+  <action name="exit_action">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resource/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

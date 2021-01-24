@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>general_item_widget</class>
+ <widget class="QFrame" name="general_item_widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>9</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="dist_gb">
+     <property name="title">
+      <string>打包好的app放置目录</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="dist_path_le">
+          <property name="toolTip">
+           <string>打包的应用程序放在哪里(默认:./dist)</string>
+          </property>
+          <property name="placeholderText">
+           <string>默认:./dist</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="dist_path_str_lb">
+          <property name="text">
+           <string>路径:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="select_dist_path_pb">
+        <property name="text">
+         <string>选择目录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="temp_work_path_gb">
+     <property name="title">
+      <string>临时工作目录</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="temp_work_path_le">
+          <property name="toolTip">
+           <string>所有临时工作文件，.log，.pyz等存放位置(默认: ./build)</string>
+          </property>
+          <property name="placeholderText">
+           <string>默认: ./build</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="build_path_str_lb">
+          <property name="text">
+           <string>路径:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="select_temp_work_path_pb">
+        <property name="text">
+         <string>选择目录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="no_confirm_gb">
+     <property name="toolTip">
+      <string>默认: SPECPATH/dist/SPECNAME</string>
+     </property>
+     <property name="title">
+      <string>替换输出目录</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QRadioButton" name="need_confirm_rb">
+        <property name="toolTip">
+         <string>提示原有目录存在，停止打包</string>
+        </property>
+        <property name="text">
+         <string>需要提示</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="no_confirm_rb">
+        <property name="toolTip">
+         <string>直接删除原有打包目录</string>
+        </property>
+        <property name="text">
+         <string>不需要提示</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="upx_search_path_gb">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>UPX实用程序的路径(默认:搜索执行路径)</string>
+     </property>
+     <property name="title">
+      <string>设置UPX搜索路径</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="upx_search_path_le">
+          <property name="placeholderText">
+           <string>默认:搜索执行路径</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="upx_search_path_str_lb">
+          <property name="text">
+           <string>路径:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="upx_search_path_pb">
+        <property name="text">
+         <string>选择目录</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="unicode_gb">
+     <property name="toolTip">
+      <string>不包含unicode编码支持(默认:如果可用就包含)</string>
+     </property>
+     <property name="title">
+      <string>unicode编码</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QRadioButton" name="unicode_support_rb">
+        <property name="text">
+         <string>有就包含</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="unicode_not_support_rb">
+        <property name="text">
+         <string>不包含支持</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="temp_file_gb">
+     <property name="toolTip">
+      <string>在构建之前清理PyInstaller缓存并删除临时文件</string>
+     </property>
+     <property name="title">
+      <string>临时文件</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QCheckBox" name="clean_cache_cb">
+        <property name="text">
+         <string>打包前清理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="log_level_gb">
+     <property name="toolTip">
+      <string>构建时控制台消息中的详细信息</string>
+     </property>
+     <property name="title">
+      <string>打包时控制台消息(默认：INFO)</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <layout class="QFormLayout" name="formLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>级别:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="log_level_cb">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>TRACE</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>DEBUG</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>INFO</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>WARN</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ERROR</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CRITICAL</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

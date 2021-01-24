@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="left_menu">
+    <file>about_system.png</file>
+    <file>about_file.png</file>
+    <file>general.png</file>
+    <file>packet.png</file>
+    <file>app_icon.png</file>
+  </qresource>
+</RCC>
